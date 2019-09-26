@@ -1,0 +1,22 @@
+{
+  "name": "best-restaurant-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "export NODE_ENV=test && nyc mocha --exit"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1"
+  }
+}
