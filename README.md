@@ -9,9 +9,9 @@ The backend was developed in [Node](https://nodejs.org/) (v10.16.2) and deployme
 - Deploy available at [Backend](https://best-restaurant-backend.herokuapp.com/)
 - I chose to use [node-geocoder](https://www.npmjs.com/package/node-geocoder) with [Here](https://developer.here.com/documentation/geocoder/topics/what-is.html) to consult any address and get the latitude and longitude.
 
-Routes available:
+Features available:
 - [Categories](https://best-restaurant-backend.herokuapp.com/categories) get a simple categories list of restaurants.
-- [Best Near Restaurants](https://best-restaurant-backend.herokuapp.com/best_near?place=New%20York%20City)(example of New York City) get info of best restaurants for some place. 
+- [Best Near Restaurants](https://best-restaurant-backend.herokuapp.com/best_near?place=New%20York%20City)(example of New York City) get information of the best restaurants from anywhere you want. 
 
 In the case of the route Best Near Restaurants you need to pass the some address as a paramter like "best_near?place=New York City"
 
