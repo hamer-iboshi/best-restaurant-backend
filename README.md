@@ -39,7 +39,7 @@ HERE_API_KEY=
 HERE_APP_ID=
 PORT=PORT
 ```
-If yout want to test quicky get my personal env configuratoin:
+If you want to test quicky get my personal env configuratoin:
 ```
 API_KEY=14c7a14033120623fb43db7dd6139d0c
 HERE_API_KEY=Nev3kMwv74jaI1aEupo0Kw
