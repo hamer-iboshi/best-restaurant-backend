@@ -34,8 +34,7 @@ module.exports = {
     },
 
     async bestNearRestaurants(req, res){
-        console.log(req.body);
-        address = await geocoder.geocode('New York City');
+        address = await geocoder.geocode("New York City");
         let config_zomato = config;
         config_zomato.params = { lat: address[0].latitude, lon: address[0].longitude };
         let response = await axios.get('https://developers.zomato.com/api/v2.1/geocode',config);
