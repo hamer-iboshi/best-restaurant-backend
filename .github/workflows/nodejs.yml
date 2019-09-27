@@ -24,3 +24,7 @@ jobs:
         npm test
       env:
         CI: true
+        API_KEY: 14c7a14033120623fb43db7dd6139d0c
+        HERE_API_KEY: b1xaPexGpwpoUwqbOusx
+        HERE_APP_ID: Nev3kMwv74jaI1aEupo0Kw
+        
