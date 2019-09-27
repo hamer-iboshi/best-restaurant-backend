@@ -30,15 +30,19 @@ module.exports = {
             category[element.categories.id] = element.categories.name;
             categories.push(category);
         });
-        res.json(categories);
+        res.json({categories: categories});
     },
 
     async bestNearRestaurants(req, res){
-        address = await geocoder.geocode("New York City");
+        var address = {};
+        await geocoder.geocode(req.query.place).then( function(response) {
+            address = response[0];
+        }).catch( function(err){
+            res.json({ error: err});
+        });
         let config_zomato = config;
-        config_zomato.params = { lat: address[0].latitude, lon: address[0].longitude };
-        let response = await axios.get('https://developers.zomato.com/api/v2.1/geocode',config);
-        console.log(response.data,config_zomato);
+        config_zomato.params = { lat: address.latitude, lon: address.longitude };
+        let response = await axios.get('https://developers.zomato.com/api/v2.1/geocode',config_zomato);
         res.json(response.data);
     },
 };
