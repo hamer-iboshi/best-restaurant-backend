@@ -9,6 +9,17 @@ chai.use(chaiHttp);
 
 describe('Restaurants', () => {
     
+
+    it('should show index message', (done) => {
+        chai.request(server)
+            .get('/')
+            .end((err, res) => {
+                should.exist(res.body);
+                res.should.have.status(200);
+                done();
+            });
+    });
+
     it('should get all categories', (done) => {
         chai.request(server)
             .get('/categories')

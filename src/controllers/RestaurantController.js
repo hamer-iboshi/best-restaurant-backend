@@ -22,6 +22,10 @@ var geocoder = NodeGeocoder(geocoder_options);
 
 module.exports = {
     
+    async index(req, res){
+        res.send('Aplication build to get informations about restaurants from Zomato API');
+    },
+
     async listCategories(req, res){
         let response = await axios.get('https://developers.zomato.com/api/v2.1/categories',config);
         let categories = [];
