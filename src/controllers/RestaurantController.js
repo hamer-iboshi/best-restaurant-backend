@@ -34,19 +34,22 @@ module.exports = {
             category[element.categories.id] = element.categories.name;
             categories.push(category);
         });
-        res.json({categories: categories});
+        return res.json({categories: categories});
     },
 
     async bestNearRestaurants(req, res){
         var address = {};
+        if (req.query.place == null) {
+            return res.send("You must specify a place! Like best_near?place=New York City")
+        }
         await geocoder.geocode(req.query.place).then( function(response) {
             address = response[0];
         }).catch( function(err){
-            res.json({ error: err});
+            return res.json({ error: err});
         });
         let config_zomato = config;
         config_zomato.params = { lat: address.latitude, lon: address.longitude };
         let response = await axios.get('https://developers.zomato.com/api/v2.1/geocode',config_zomato);
-        res.json(response.data);
+        return res.json(response.data);
     },
 };
