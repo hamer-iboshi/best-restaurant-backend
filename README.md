@@ -1,4 +1,4 @@
 # best-restaurant-backend
-[![Actions Status](https://xxx.execute-api.us-west-2.amazonaws.com/production/badge/hi15/best-restaurant-backend?style=flat-square)](https://xxx.execute-api.us-west-2.amazonaws.com/production/results/hi15/best-restaurant-backend)
+[![Actions Status](https://github.com/hi15/best-restaurant-backend/workflows/nodeci/badge.svg)](https://github.com/hi15/best-restaurant-backend/actions)
 
 Get information about restaurants from Zomato API
