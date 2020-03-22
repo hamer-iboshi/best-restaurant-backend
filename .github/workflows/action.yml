@@ -3,25 +3,13 @@ on:
   schedule:
     - cron: '0 12 * * 1' 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x]
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Test
-      run: |
-        npm install
-        npm run build --if-present
-        npm test
+    - name: Run build & test
+      uses: hi15/action-tests-node@v0.1-alpha
       env:
         CI: true
         API_KEY: 14c7a14033120623fb43db7dd6139d0c
